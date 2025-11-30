@@ -43,3 +43,15 @@ for (let i = 0; i < arr.length; i++) {
     newArr.push(arr[i].name);
 }
 console.log(newArr)
+
+//Задание 7.4
+const person1 = {
+    name: "Андрей",
+    age: "31",
+};
+function setFullName (fullname ) {
+    return this.fullname = fullname;
+}
+const setPersonFullName = setFullName.bind(person1);
+console.log(setPersonFullName("John Smith"));
+console.log(person1);
