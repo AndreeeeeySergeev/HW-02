@@ -55,3 +55,12 @@ function setFullName (fullname ) {
 const setPersonFullName = setFullName.bind(person1);
 console.log(setPersonFullName("John Smith"));
 console.log(person1);
+
+//Задание 7.5
+const mass = [10, 10, 5, 5, 3, 3, 3, 1, 1, 7, 7, 7, 7];
+const newSet = new Set(mass); //преобразуем массив в Set
+const sortedArray = Array.from(newSet)
+    .sort((i, j) => i - j);//переделываем Set обратно в массив и сортируем его
+
+const newSortedSet = new Set(sortedArray);//превращаем сортированный массив обратно в Set
+console.log(newSortedSet);
